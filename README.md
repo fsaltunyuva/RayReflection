@@ -3,6 +3,11 @@
 The project is a simple 2D scene that consists of a square that creates a ray that reflects on the walls
 and the walls that reflect the ray. 
 
+> [!WARNING]
+> * Use the scene view to see the ray reflections because they are drawn with [Debug.DrawRay](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Debug.DrawRay.html).
+> * Use the pause button in Unity Editor before playing and use the step buttons to see the reflections step by step.
+> * Walls must have a collider and "Reflectable" tag to reflect the ray.
+
 ## Problem
 In a basic approach like this:
 
@@ -43,8 +48,8 @@ This problem occurs because of the floating point precision and the tolerance of
 When we hit the collider, the hit point is positioned slightly inside the collider.
 Therefore, when the second ray is cast from the hit point (which is positioned inside the wall), it hits the same collider again.
 
-## Solution
-There are two solutions for this problem.
+## Solutions
+There are two solutions to this problem.
 
 ### Solution 1
 As stated in [this StackOverflow answer](https://stackoverflow.com/a/38193001/19469259), the setting 
@@ -86,8 +91,3 @@ public class ReflectableRaycaster : MonoBehaviour
     }
 }
 ```
-
-> [!IMPORTANT]
-> * Use the scene view to see the ray reflections because they are drawn with [Debug.DrawRay](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Debug.DrawRay.html).
-> * Use the pause button in Unity Editor before playing and use the step buttons to see the reflections step by step.
-> * Walls must have collider and "Reflectable" tag to reflect the ray.
