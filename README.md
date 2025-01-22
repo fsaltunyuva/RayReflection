@@ -43,6 +43,8 @@ public class ReflectableRaycaster : MonoBehaviour
 After the second reflection, the ray starts to behave weirdly. 
 It starts to reflect in a way that it hits an invisible wall and reflects to the opposite direction again and again.
 
+![image](https://github.com/user-attachments/assets/06269088-0868-4d66-988b-080a95ac6801)
+
 
 This problem occurs because of the floating point precision and the tolerance of the Physics2D.Raycast method. 
 When we hit the collider, the hit point is positioned slightly inside the collider.
