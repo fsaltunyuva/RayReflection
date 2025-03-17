@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ReflectableRaycaster : MonoBehaviour
 {
-    Vector2 direction = new Vector2(10, -10); // Initial direction
+    [SerializeField] Vector2 direction = new Vector2(10, -10); // Initial direction
     RaycastHit2D hit;
     Vector2 origin;
 
