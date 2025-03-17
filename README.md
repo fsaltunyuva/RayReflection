@@ -1,7 +1,9 @@
 # Ray Reflection (and it's problems) in Unity
 
 The project is a simple 2D scene that consists of a square that creates a ray that reflects on the walls
-and the walls that reflect the ray. 
+and the walls that reflect the ray. The green ray represents the current ray, the red line represents the normal of the intersected surface, and the blue ray represents the reflection of the current array.
+
+![](https://github.com/fsaltunyuva/RayReflection/blob/main/demo.gif)
 
 > [!WARNING]
 > * Use the scene view to see the ray reflections because they are drawn with [Debug.DrawRay](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Debug.DrawRay.html).
